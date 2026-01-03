@@ -19,7 +19,7 @@ Note: Month-over-month calculations assume continuous monthly data, as the datas
 - The business experienced rapid growth during 2017, with sustained increases in both orders and revenue, indicating successful customer acquisition and scaling.
 - Seasonal demand peaks are evident in Q4, particularly November, followed by sharp post-peak declines in December and early Q1.
 - Periods where revenue growth outpaces order growth e.g. March 2018 suggest improvements in average order value, potentially driven by pricing, product mix, or promotional strategies.
-- Several extreme MoM changes highlight either one-off events (e.g. promotions or system launches) or potential data completeness issues that warrant further investigation.
+- Several extreme MoM changes highlight either one-off events (e.g. promotions or system launches) or potential data completeness issues that warrant further investigation e.g September 2018.
 - From mid-2018 onwards, growth begins to stabilise and flatten, indicating a transition from high-growth to a more mature operating phase.
 
 **Business Implications**
