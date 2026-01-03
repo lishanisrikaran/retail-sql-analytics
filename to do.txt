@@ -1,0 +1,3 @@
+- Clean up SQL code and publish - ensure comments are clear
+- Attach export of query output
+- Add approach, findings, business implications to folder
