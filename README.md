@@ -5,7 +5,8 @@ This project undertakes analysis from a multi-table retail e-commerce dataset us
 ## Analysed areas:
 
 ### **1) Revenue & Order Performance**
-**Objective**: To evaluate monthly revenue and order trends and quantify month-over-month (MoM) growth, in order to identify growth patterns, seasonality, and performance volatility that may impact strategic decision-making. <br>
+**Objective**: To evaluate monthly revenue and order trends and quantify month-over-month (MoM) growth, in order to identify growth patterns, seasonality, and performance volatility that may impact strategic decision-making. 
+
 **Approach:** Using advanced SQL techniques, transaction data was aggregated at a monthly level. For each month, total orders and total revenue were calculated, alongside prior-month comparisons to derive MoM growth percentages for both metrics.
 
 **Key Findings**
