@@ -10,7 +10,10 @@ The analysis is based on the [Brazilian E-Commerce Public Dataset (Kaggle)](http
 ### **1) Revenue & Order Performance**
 **Objective**: To evaluate monthly revenue and order trends and quantify month-over-month (MoM) growth, in order to identify growth patterns, seasonality, and performance volatility that may impact strategic decision-making. 
 
-**Approach:** Using advanced SQL techniques, transaction data was aggregated at a monthly level. For each month, total orders and total revenue were calculated, alongside prior-month comparisons to derive MoM growth percentages for both metrics.
+**Approach:** Using advanced SQL techniques, transaction data was aggregated at a monthly level. For each month, total orders and total revenue were calculated, alongside prior-month comparisons to derive MoM growth percentages for both metrics. <br>
+
+Note: Month-over-month calculations assume continuous monthly data, as the dataset does not contain missing months. If gaps were present, MoM comparisons would require a calendar table to ensure accuracy.
+
 
 **Key Findings**
 - The business experienced rapid growth during 2017, with sustained increases in both orders and revenue, indicating successful customer acquisition and scaling.
@@ -23,6 +26,8 @@ The analysis is based on the [Brazilian E-Commerce Public Dataset (Kaggle)](http
 - Forecasting models should explicitly account for seasonality and volatility to avoid overstating expected performance.
 - Marketing and inventory strategies can be optimised by aligning investment with historically high-performing months.
 - Leadership should monitor stabilising growth trends as a signal to shift focus from acquisition to retention, basket size, and customer lifetime value.
+
+
 
 
 4.2 Customer Behaviour & Retention
