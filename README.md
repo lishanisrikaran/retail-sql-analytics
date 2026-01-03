@@ -1,23 +1,26 @@
 # retail-sql-analytics
-Analyse multi-table retail e-commerce data using advanced SQL techniques to uncover revenue trends, customer behaviour, retention patterns, and product performance. Present insights via a Power BI dashboard suitable for business stakeholders.
 
-Document the business problem, SQL techniques used, key insights, and future improvements.
-Use this project to confidently discuss advanced SQL, business logic, and data storytelling in
-interviews.
+This project undertakes analysis from a multi-table retail e-commerce dataset using advanced SQL techniques to uncover revenue trends, customer behaviour, retention patterns, and product performance. Furthermore, the findings are presented via a Power BI dashboard suitable for business stakeholders.
 
-Core Tables:
-- orders (order lifecycle and dates)
-- order_items (product-level revenue)
-- customers (customer identifiers and signup dates)
-- products (product categories and names)
+## Analysed areas:
 
-CTEs, window functions (LAG, LEAD, ROW_NUMBER, DENSE_RANK), DATE_TRUNC,
-DATE_PART, NOT EXISTS, EXISTS, FILTER, CASE statements, COALESCE,
-PERCENTILE_CONT (median), and multi-table joins.
+### **1) Revenue & Order Performance**
+**Objective**: To evaluate monthly revenue and order trends and quantify month-over-month (MoM) growth, in order to identify growth patterns, seasonality, and performance volatility that may impact strategic decision-making.
+**Approach:** Using advanced SQL techniques, transaction data was aggregated at a monthly level. For each month, total orders and total revenue were calculated, alongside prior-month comparisons to derive MoM growth percentages for both metrics.
 
-4.1 Revenue & Order Performance
-Analyse monthly revenue trends, total orders, and month-over-month growth using DATE_TRUNC
-and LAG window functions.
+**Key Findings**
+- The business experienced rapid growth during 2017, with sustained increases in both orders and revenue, indicating successful customer acquisition and scaling.
+- Seasonal demand peaks are evident in Q4, particularly November, followed by sharp post-peak declines in December and early Q1.
+- Periods where revenue growth outpaces order growth suggest improvements in average order value, potentially driven by pricing, product mix, or promotional strategies.
+- Several extreme MoM changes highlight either one-off events (e.g. promotions or system launches) or potential data completeness issues that warrant further investigation.
+- From mid-2018 onwards, growth begins to stabilise and flatten, indicating a transition from high-growth to a more mature operating phase.
+
+**Business Implications**
+- Forecasting models should explicitly account for seasonality and volatility to avoid overstating expected performance.
+- Marketing and inventory strategies can be optimised by aligning investment with historically high-performing months.
+- Leadership should monitor stabilising growth trends as a signal to shift focus from acquisition to retention, basket size, and customer lifetime value.
+
+
 4.2 Customer Behaviour & Retention
 Identify repeat customers, calculate retention rates, and detect churned customers using NOT
 EXISTS and CASE logic.
