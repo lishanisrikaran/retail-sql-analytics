@@ -2,6 +2,9 @@
 
 This project undertakes analysis from a multi-table retail e-commerce dataset using advanced SQL techniques to uncover revenue trends, customer behaviour, retention patterns, and product performance. Furthermore, the findings are presented via a Power BI dashboard suitable for business stakeholders.
 
+## Dataset:
+The analysis is based on the [Brazilian E-Commerce Public Dataset (Kaggle)](https://www.kaggle.com/datasets/carrie1/ecommerce-data), selected for its rich transactional and customer data, allowing meaningful exploration of commercial performance and customer behaviour at scale.
+
 ## Analysed areas:
 
 ### **1) Revenue & Order Performance**
