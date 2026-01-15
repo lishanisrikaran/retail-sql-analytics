@@ -54,7 +54,7 @@ SELECT
     cc.month_number,
     cc.active_customers,
     cs.cohort_size,
-    ROUND(cc.active_customers / cs.cohort_size * 100, 2) AS retention_rate
+    ROUND(cc.active_customers / cs.cohort_size, 2) AS retention_rate
 FROM cohort_counts cc
 JOIN cohort_sizes cs
     ON cc.cohort_month = cs.cohort_month
