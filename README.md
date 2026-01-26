@@ -30,9 +30,9 @@
 <div class="section">
   <h2>Tools & Skills Demonstrated</h2>
   <ul>
-    <li><strong>SQL:</strong> CTEs, recursive CTEs, window functions, cohort analysis, segmentation, ranking, time series analysis</li>
-    <li><strong>Power BI:</strong> Interactive dashboards, trend visualisation, histograms</li>
-    <li><strong>Analytics Skills:</strong> KPI design, business interpretation, growth vs maturity diagnosis, commercial recommendations</li>
+    <li><strong>SQL:</strong> CTEs, recursive CTEs, window functions, ranking, segmentation, cohort analysis, time series analysis</li>
+    <li><strong>Power BI:</strong>Interactive dashboards with filters and slicers, trend visualisation, distribution charts, geospatial maps, and cohort analysis</li>
+    <li><strong>Analytics Skills:</strong> KPI design, business interpretation, distribution and order value analysis, growth vs. maturity diagnosis, commercial recommendations</li>
   </ul>
 </div>
 
