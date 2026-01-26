@@ -1,45 +1,154 @@
-# retail-sql-analytics
+<h1>Retail SQL Analytics Project</h1>
+<p><strong>End-to-end data analysis using SQL and Power BI on the Brazilian Olist e-commerce dataset</strong></p>
 
-This project undertakes analysis from a multi-table retail e-commerce dataset using advanced SQL techniques to uncover revenue trends, customer behaviour, retention patterns, and product performance. Furthermore, the findings are presented via a Power BI dashboard suitable for business stakeholders.
+<div class="section">
+  <h2>Project Overview</h2>
+  <p>
+    This project analyses a multi-table retail e-commerce dataset using advanced SQL techniques to uncover insights into revenue trends, customer behaviour, retention patterns, cohort dynamics, product performance, and order value distribution.
+  </p>
+  <p>
+    Insights are presented using Power BI dashboards and supported with structured written analysis to demonstrate both technical capability and business thinking.
+  </p>
+</div>
 
-## Dataset:
-The analysis is based on the [Brazilian E-Commerce Public Dataset (Kaggle)](https://www.kaggle.com/datasets/carrie1/ecommerce-data), selected for its rich transactional and customer data, allowing meaningful exploration of commercial performance and customer behaviour at scale.
+<div class="section">
+  <h2>Dataset</h2>
+  <p><strong>Brazilian E-Commerce Public Dataset by Olist (Kaggle)</strong></p>
+  <ul>
+    <li>Orders, customers, sellers</li>
+    <li>Payments and reviews</li>
+    <li>Products and categories</li>
+    <li>Geographic information</li>
+  </ul>
+  <p>
+    The dataset was chosen for its rich relational structure and realistic commercial complexity.
+  </p>
+</div>
 
-## Analysed areas:
+<div class="section">
+  <h2>Tools & Skills Demonstrated</h2>
+  <ul>
+    <li><strong>SQL:</strong> CTEs, recursive CTEs, window functions, cohort analysis, segmentation, ranking, time series analysis</li>
+    <li><strong>Power BI:</strong> Interactive dashboards, trend visualisation, histograms</li>
+    <li><strong>Analytics Skills:</strong> KPI design, business interpretation, growth vs maturity diagnosis, commercial recommendations</li>
+  </ul>
+</div>
 
-### **1) Revenue & Order Performance**
-**Objective**: To evaluate monthly revenue and order trends and quantify month-over-month (MoM) growth, in order to identify growth patterns, seasonality, and performance volatility that may impact strategic decision-making. 
+<div class="section">
+  <h2>Project Structure</h2>
+  <p>Each section follows the format:</p>
+  <div class="highlight">
+    SQL Query → Power BI Visualisation → Written Analysis
+  </div>
+</div>
 
-**Approach:** Using advanced SQL techniques, transaction data was aggregated at a monthly level. For each month, total orders and total revenue were calculated, alongside prior-month comparisons to derive MoM growth percentages for both metrics. <br>
+<div class="section">
+  <h2>1. Revenue & Order Performance</h2>
 
-Note: Month-over-month calculations assume continuous monthly data, as the dataset does not contain missing months. If gaps were present, MoM comparisons would require a calendar table to ensure accuracy.
+  <h3>Objective</h3>
+  <p>
+    Evaluate monthly revenue and order trends and quantify month-over-month growth to identify growth patterns, seasonality, and volatility.
+  </p>
 
+  <h3>Key Insights</h3>
+  <ul>
+    <li>Rapid growth throughout 2017 suggests strong acquisition and scaling</li>
+    <li>Clear seasonality with strong Q4 (November) peak</li>
+    <li>Revenue occasionally outpaces order growth, indicating higher order values</li>
+    <li>Growth stabilises in mid-2018, indicating maturity</li>
+  </ul>
 
-**Key Findings**
-- The business experienced rapid growth during 2017, with sustained increases in both orders and revenue, indicating successful customer acquisition and scaling.
-- Seasonal demand peaks are evident in Q4, particularly November, followed by sharp post-peak declines in December and early Q1.
-- Periods where revenue growth outpaces order growth e.g. March 2018 suggest improvements in average order value, potentially driven by pricing, product mix, or promotional strategies.
-- Several extreme MoM changes highlight either one-off events (e.g. promotions or system launches) or potential data completeness issues that warrant further investigation e.g September 2018.
-- From mid-2018 onwards, growth begins to stabilise and flatten, indicating a transition from high-growth to a more mature operating phase.
+  <h3>Strategic Implications</h3>
+  <ul>
+    <li>Forecasting should explicitly account for seasonality</li>
+    <li>Marketing and inventory should align with Q4 demand peaks</li>
+    <li>Growth strategy should shift toward retention and basket size</li>
+  </ul>
+</div>
 
-**Business Implications**
-- Forecasting models should explicitly account for seasonality and volatility to avoid overstating expected performance.
-- Marketing and inventory strategies can be optimised by aligning investment with historically high-performing months.
-- Leadership should monitor stabilising growth trends as a signal to shift focus from acquisition to retention, basket size, and customer lifetime value.
+<div class="section">
+  <h2>2. Customer Behaviour & Retention</h2>
 
+  <h3>Key Insights</h3>
+  <ul>
+    <li>Only 3.12% of customers are repeat buyers</li>
+    <li>Over 70% churn rate</li>
+    <li>Demand heavily concentrated in São Paulo and Rio de Janeiro</li>
+    <li>High satisfaction does not translate into higher repeat behaviour</li>
+  </ul>
 
+  <h3>Strategic Implications</h3>
+  <ul>
+    <li>Retention is the single largest growth opportunity</li>
+    <li>Post-purchase lifecycle strategies are critical</li>
+    <li>Geographic concentration enables focused experimentation</li>
+  </ul>
+</div>
 
+<div class="section">
+  <h2>3. Cohort Analysis – Retention Over Time</h2>
 
-4.2 Customer Behaviour & Retention
-Identify repeat customers, calculate retention rates, and detect churned customers using NOT
-EXISTS and CASE logic.
-4.3 Cohort Analysis
-Group customers by signup month and analyse retention over time using date arithmetic and
-window functions.
-4.4 Product Performance & Ranking
-Rank products and categories by revenue using DENSE_RANK and GROUP BY, accounting for
-ties.
-4.5 Order Value Distribution
-Calculate median and average order values using PERCENTILE_CONT and aggregation functions.
-4.6 Time Series & Seasonality
-Analyse weekly and monthly trends and handle missing time periods using GENERATE_SERIES.
+  <h3>Key Insights</h3>
+  <ul>
+    <li>Month 1 retention consistently below 1%</li>
+    <li>Retention collapse is immediate</li>
+    <li>Later cohorts do not improve despite acquisition growth</li>
+    <li>Long-term reactivation exists but is commercially insignificant</li>
+  </ul>
+
+  <h3>Strategic Implications</h3>
+  <ul>
+    <li>Business is structurally dependent on acquisition</li>
+    <li>CLV is extremely low</li>
+    <li>Retention improvement would generate outsized impact</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>4. Product & Category Performance</h2>
+
+  <h3>Key Insights</h3>
+  <ul>
+    <li>No individual product contributes more than 0.5% of revenue</li>
+    <li>Strong long-tail structure at product level</li>
+    <li>Top 5 categories contribute over 40% of revenue</li>
+    <li>Category strategy is a stronger lever than SKU optimisation</li>
+  </ul>
+
+  <h3>Strategic Implications</h3>
+  <ul>
+    <li>Focus investment on high-performing categories</li>
+    <li>Support mid-tier products to scale</li>
+    <li>Rationalise low-performing catalogue segments</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>5. Order Value Distribution</h2>
+
+  <h3>Key Insights</h3>
+  <ul>
+    <li>Average order value: R$159.83</li>
+    <li>Median order value: R$105.28</li>
+    <li>Distribution is strongly right-skewed</li>
+  </ul>
+
+  <h3>Strategic Implications</h3>
+  <ul>
+    <li>Median is more reliable for pricing and thresholds</li>
+    <li>High-value customers should be targeted for retention</li>
+    <li>Promotional thresholds should align closer to typical spend</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>Overall Conclusion</h2>
+  <p>
+    The business demonstrates strong acquisition-driven growth but extremely weak retention. 
+    Sustainable performance would depend primarily on improving customer lifetime value, lifecycle engagement, and category-level optimisation rather than increasing acquisition volume alone.
+  </p>
+</div>
+
+</body>
+</html>
+
