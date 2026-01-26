@@ -31,7 +31,7 @@
   <h2>Tools & Skills Demonstrated</h2>
   <ul>
     <li><strong>SQL:</strong> CTEs, recursive CTEs, window functions, ranking, segmentation, cohort analysis, time series analysis</li>
-    <li><strong>Power BI:</strong>Interactive dashboards with filters and slicers, trend visualisation, distribution charts, geospatial maps, and cohort analysis</li>
+    <li><strong>Power BI:</strong> Interactive dashboards with filters and slicers, trend visualisation, distribution charts, geospatial maps, and cohort analysis</li>
     <li><strong>Analytics Skills:</strong> KPI design, business interpretation, distribution and order value analysis, growth vs. maturity diagnosis, commercial recommendations</li>
   </ul>
 </div>
@@ -130,8 +130,8 @@
 
   <h3>Key Insights</h3>
   <ul>
-    <li>Average order value: R$159.83</li>
-    <li>Median order value: R$105.28</li>
+    <li>Average order value: R$157.353</li>
+    <li>Median order value: R$103.55</li>
     <li>Distribution is strongly right-skewed</li>
   </ul>
 
