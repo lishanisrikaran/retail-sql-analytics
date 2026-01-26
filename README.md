@@ -1,6 +1,8 @@
 <h1>Retail SQL Analytics Project</h1>
 <p><strong>End-to-end data analysis using SQL and Power BI on the Brazilian Olist e-commerce dataset</strong></p>
 
+<img width="800" height="451" alt="image" src="https://github.com/user-attachments/assets/15045289-62ea-41ee-bb12-ee3c62ac0066" />
+
 <div class="section">
   <h2>Project Overview</h2>
   <p>
