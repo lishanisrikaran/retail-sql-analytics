@@ -135,18 +135,44 @@ GROUP BY review_score_bucket
 ORDER BY review_score_bucket DESC;
 
 -- Review Comment Analysis
+WITH customer_review_behavior AS (
+-- Categorises if a customer has left a review historically
+    SELECT
+        c.customer_unique_id,
+        MAX(
+            CASE 
+                WHEN r.review_comment_title IS NOT NULL
+                  OR r.review_comment_message IS NOT NULL
+                THEN 1 ELSE 0 
+            END
+        ) AS left_comment
+    FROM customers c
+    JOIN orders o ON c.customer_id = o.customer_id
+    LEFT JOIN order_reviews r ON o.order_id = r.order_id
+    GROUP BY c.customer_unique_id
+),
+
+customer_orders AS (
+-- Totals the orders of each customer
+    SELECT
+        c.customer_unique_id,
+        COUNT(DISTINCT o.order_id) AS total_orders
+    FROM customers c
+    JOIN orders o ON c.customer_id = o.customer_id
+    GROUP BY c.customer_unique_id
+)
+
+-- Breakdown of customer counts and average orders per customer based on review behaviour 
 SELECT
-    CASE
-        WHEN r.review_comment_title IS NOT NULL
-          OR r.review_comment_message IS NOT NULL
-        THEN 'left_comment'
+    CASE 
+        WHEN crb.left_comment = 1 THEN 'left_comment'
         ELSE 'no_comment'
     END AS review_behavior,
-    COUNT(DISTINCT c.customer_unique_id) AS customers,
-    ROUND(AVG(r.review_score), 2) AS avg_review_score
-FROM reviews r
-JOIN orders o ON r.order_id = o.order_id
-JOIN customers c ON o.customer_id = c.customer_id
+    COUNT(*) AS customers,
+    ROUND(AVG(co.total_orders), 2) AS avg_orders_per_customer
+FROM customer_review_behavior crb
+JOIN customer_orders co
+    ON crb.customer_unique_id = co.customer_unique_id
 GROUP BY review_behavior;
 
 
