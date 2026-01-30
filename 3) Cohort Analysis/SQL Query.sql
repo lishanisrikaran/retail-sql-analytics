@@ -40,7 +40,7 @@ cohort_counts AS (
 ),
 
 cohort_sizes AS (
--- Number of customers witin each cohort
+-- Number of customers within each cohort
     SELECT
         cohort_month,
         active_customers AS cohort_size
